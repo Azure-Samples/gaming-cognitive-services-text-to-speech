@@ -121,7 +121,7 @@
 		},
 		"repoUrl": {
 			"type": "string",
-			"defaultValue": "https://github.com/Azure-Samples/gaming-cognitive-services-content-moderation"
+			"defaultValue": "https://github.com/Azure-Samples/gaming-cognitive-services-text-to-speech"
 		},
 		"branch": {
 			"type": "string",
