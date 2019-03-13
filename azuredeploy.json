@@ -16,7 +16,7 @@
             }
         },
         "textAnalyticsTier": {
-            "type": "String",
+            "type": "string",
 			"allowedValues": [
 				"F0",
 				"S0"
@@ -33,7 +33,7 @@
             }
         },
         "textToSpeechTier": {
-            "type": "String",
+            "type": "string",
 			"allowedValues": [
 				"F0",
 				"S0"
@@ -126,6 +126,7 @@
 		"branch": {
 			"type": "string",
 			"defaultValue": "master"
+        }
     },
     "variables": {
 		"defaultSASKeyName": "RootManageSharedAccessKey",
