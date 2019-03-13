@@ -281,7 +281,7 @@
                     "name": "web",
                     "type": "sourcecontrols",
                     "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', parameters('appName'))]"
+                        "[resourceId('Microsoft.Web/Sites', parameters('functionName'))]"
                     ],
                     "properties": {
                         "RepoUrl": "[parameters('repoUrl')]",
