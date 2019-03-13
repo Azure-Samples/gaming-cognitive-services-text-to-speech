@@ -17,6 +17,6 @@ Help bring everyone into the conversation by converting text messages to audio u
 
 To deploy the reference architecture to your own account, use the button below.
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fAzure-Samples%2fgaming-cognitive-services-text-to-speech%2fmaster%2fazuredeploy.json" target="_blank"><img src="https://azuredeploy.net/deploybutton.png"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fgaming-cognitive-services-text-to-speech%2Fimport%2Fazuredeploy.json" target="_blank"><img src="https://azuredeploy.net/deploybutton.png"/></a>
 
 Then, please see the full documentation on the [Text to Speech Reference Architecture](https://docs.microsoft.com/gaming/azure/reference-architectures/cognitive-text-to-speech) to learn how it all works.
