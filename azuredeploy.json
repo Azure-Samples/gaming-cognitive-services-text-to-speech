@@ -16,7 +16,7 @@
             }
         },
         "textAnalyticsTier": {
-            "type": "string",
+            "type": "String",
 			"allowedValues": [
 				"F0",
 				"S0"
@@ -33,7 +33,7 @@
             }
         },
         "textToSpeechTier": {
-            "type": "string",
+            "type": "String",
 			"allowedValues": [
 				"F0",
 				"S0"
@@ -118,15 +118,7 @@
 			"metadata": {
 				"description": "The instance size of the hosting plan (small, medium, or large)"
 			}
-		},
-		"repoUrl": {
-			"type": "string",
-			"defaultValue": "https://github.com/Azure-Samples/gaming-cognitive-services-text-to-speech"
-		},
-		"branch": {
-			"type": "string",
-			"defaultValue": "master"
-        }
+		}
     },
     "variables": {
 		"defaultSASKeyName": "RootManageSharedAccessKey",
@@ -275,20 +267,7 @@
 						"AzureWebJobsDashboard": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-05-01-preview').key1,';')]",
 						"FUNCTIONS_EXTENSION_VERSION": "~2"
 					}
-				},
-                {
-                    "apiVersion": "2015-08-01",
-                    "name": "web",
-                    "type": "sourcecontrols",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', parameters('functionName'))]"
-                    ],
-                    "properties": {
-                        "RepoUrl": "[parameters('repoUrl')]",
-                        "branch": "[parameters('branch')]",
-                        "IsManualIntegration": true
-                    }
-                }
+				}
 			]
 		}
     ]
