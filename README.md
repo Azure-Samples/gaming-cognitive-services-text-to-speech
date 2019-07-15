@@ -1,5 +1,5 @@
 ---
-topic: sample
+page_type: sample
 languages:
   - csharp
 products:
@@ -7,6 +7,7 @@ products:
   - azure-cognitive-services
   - azure-event-hubs
 azureDeploy: https://raw.githubusercontent.com/Azure-Samples/gaming-cognitive-services-text-to-speech/master/azuredeploy.json
+description: "Help bring everyone into the conversation by converting text messages to audio using text to speech."
 ---
 
 # Text to Speech for Gaming - Reference Architecture
