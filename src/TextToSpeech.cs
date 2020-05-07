@@ -142,7 +142,7 @@ namespace ChatTextToSpeech
             return null;
         }
 
-        private async static Task CreateBlob(string blobName, Stream data, ILogger log)
+        private async static Task CreateBlob(string name, Stream data, ILogger log)
         {
             string connectionString = Environment.GetEnvironmentVariable("STORAGE_CONNECTION_STRING"); // DefaultEndpointsProtocol=https;AccountName=YOURSTORAGEACCOUNTNAME;AccountKey=YOURSTORAGESUBSCRIPTIONKEY;EndpointSuffix=YOURENDPOINTSUFFIX
 
@@ -152,7 +152,7 @@ namespace ChatTextToSpeech
 
             await blobContainer.CreateIfNotExistsAsync();
 
-            var blob = blobContainer.GetBlobClient(blobName);
+            var blob = blobContainer.GetBlobClient(name);
 
             await blob.UploadAsync(data);
         }
