@@ -27,7 +27,7 @@ namespace ChatTextToSpeech
             {
                 try
                 {
-                    string messageBody = Encoding.UTF8.GetString(eventData.Body.ToArray());
+                    string messageBody = Encoding.UTF8.GetString(eventData.Body.Array, eventData.Body.Offset, eventData.Body.Count);
 
                     Output output = new Output();
 
