@@ -109,7 +109,7 @@ namespace ChatTextToSpeech
 
                                     string name = Guid.NewGuid().ToString("n");
 
-                                    await UploadBlobAsync(name + ".wav", dataStream);
+                                    await CreateBlob(name + ".wav", dataStream, log);
 
                                     log.LogInformation($"The speech file is saved: {name}.wav");
 
@@ -142,7 +142,7 @@ namespace ChatTextToSpeech
             return null;
         }
 
-        private async static Task UploadBlobAsync(string blobName, Stream data)
+        private async static Task CreateBlob(string blobName, Stream data, ILogger log)
         {
             string connectionString = Environment.GetEnvironmentVariable("STORAGE_CONNECTION_STRING"); // DefaultEndpointsProtocol=https;AccountName=YOURSTORAGEACCOUNTNAME;AccountKey=YOURSTORAGESUBSCRIPTIONKEY;EndpointSuffix=YOURENDPOINTSUFFIX
 
