@@ -4,13 +4,13 @@ using Azure.Storage.Blobs;
 using Microsoft.Azure.EventHubs;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ChatTextToSpeech
@@ -116,7 +116,7 @@ namespace ChatTextToSpeech
                                     output.SpeechStoragePointer = name;
                                     output.OriginalString = messageBody;
 
-                                    var outputJson = JsonConvert.SerializeObject(output);
+                                    var outputJson = JsonSerializer.Serialize(output);
 
                                     return outputJson;
                                 }
@@ -212,6 +212,7 @@ namespace ChatTextToSpeech
                 {
                     throw new ArgumentNullException(nameof(subscriptionKey));
                 }
+
                 this.tokenFetchUri = tokenFetchUri;
                 this.subscriptionKey = subscriptionKey;
             }
